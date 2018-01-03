@@ -21,7 +21,7 @@ namespace SlimSocial_for_Facebook
             PackageVersion number = Package.Current.Id.Version; // Get app version
             version.Text += string.Format(" {0}.{1}.{2}\r\n", number.Major, number.Minor, number.Build);
             creatorName.Text = "Pharetra\r\n";
-
+            Windows.UI.Core.SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = Windows.UI.Core.AppViewBackButtonVisibility.Visible;
             // Handle the back button request (go to the previous page)
             SystemNavigationManager.GetForCurrentView().BackRequested += (s, a) => // add the back event
             {
